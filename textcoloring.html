@@ -1,0 +1,19 @@
+<head>
+  <title>JS Example</title>
+</head>
+<body>
+
+<h2 id="greeting">Hello!</h2>
+<button onclick="changeText()">Click Me</button>
+<button onclick="changeColor()">Click To changecolor</button>
+
+<script>
+  function changeText() {
+    document.getelementbyid("greeting").innerHTML = "why your learning js";
+  }
+ function changeColor() {
+    document.getElementById("greeting").style.color = "blue";
+  }
+</script>
+</body>
+</html>

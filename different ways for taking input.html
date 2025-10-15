@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Input Methods</title>
+</head>
+<body>
+	<h2>Different Ways of Taking Input</h2>
+	<script>
+	// 1.Using prompt()
+	let name = prompt("Enter your name:");
+	document.write("Hello...."+ name + " Good afternoon!🫣🫣"+"<br>");
+	//2. Using HTML input field
+	document.write("Name: "+'<input type="text" id="txtInput" placeholder="Type something">'+"<br><br>");
+	document.write("Section: " +'<input type="text" id="section" placeholder="Type something">'+"<br><br>");
+	document.write("class: " +'<input type="text" id="class" placeholder="Type something">'+"<br><br>");
+	document.write("place: " +'<input type="text" id="place" placeholder="Type something">'+"<br><br>");
+
+
+	document.write('<button onclick="showInput()">Submit</button><br>');
+
+	function showInput(){
+	 
+	 let val1 = document.getElementById("txtInput").value;
+	 let val2 = document.getElementById("section").value;
+	 let val3 = document.getElementById("class").value;
+	 let val4 = document.getElementById("place").value;
+	 
+	 document.write("STUDENT DETAILS:"+"<br><br>");
+	
+	 document.write("Name: " + val1 + "<br>");
+	 document.write("Section: " + val2 + " <br>");
+	 document.write("Class: " + val3 + " <br>");
+	 document.write("Place: " + val4 + "<br>");
+
+	 }
+
+	</script>
+</body>
+</html> 

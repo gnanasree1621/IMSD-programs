@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+</head>
+<body>
+  <h1 id="heading">Hello World</h1>
+  <p id="para">This is a paragraph.</p>
+  <button onclick="changeContent()">Change Content</button>
+
+  <script>
+    function changeContent() {
+      // Accessing document properties
+      document.bgColor = "lightyellow";   // changes background color
+      document.title = "Updated Title";   // updates page title
+
+      // Accessing elements using methods
+      document.getElementById("heading").innerHTML = "Document Object Demo";
+      document.getElementById("para").innerHTML = "The content has been changed using document object methods!";
+    }
+  </script>
+</body>
+</html>

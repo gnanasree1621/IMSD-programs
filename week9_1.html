@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Events</title>
+    <script>
+        // Function to calculate factorial
+        function factorial() {
+            let num = document.getElementById("num").value;
+            num = parseInt(num);
+            let fact = 1;
+
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.getElementById("result").innerHTML = 
+                "Factorial of " + num + " is: " + fact;
+        }
+
+        // Function to generate Fibonacci series
+        function fibonacci() {
+            let num = document.getElementById("num").value;
+            num = parseInt(num);
+            let n1 = 0, n2 = 1, nextTerm;
+            let series = [n1, n2];
+
+            for (let i = 2; i < num; i++) {
+                nextTerm = n1 + n2;
+                series.push(nextTerm);
+                n1 = n2;
+                n2 = nextTerm;
+            }
+
+            document.getElementById("result").innerHTML = 
+                "Fibonacci series up to " + num + " terms: " + series.join(", ");
+        }
+
+        // Function to clear the result area
+        function clearResult() {
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("num").value = "";
+        }
+    </script>
+</head>
+
+<body style="font-family: Arial; text-align: center; margin-top: 40px;">
+    <h2>JavaScript Functions and Events</h2>
+    <p>Enter a number: 
+        <input type="number" id="num" placeholder="Enter number">
+    </p>
+
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="fibonacci()">Fibonacci</button>
+    <button onclick="clearResult()">Clear</button>
+
+    <h3 id="result" style="color: blue; margin-top: 20px;"></h3>
+</body>
+</html>
